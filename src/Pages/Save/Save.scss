@@ -1,0 +1,22 @@
+@import "../../style.scss";
+
+.save-container {
+    @include themify($themes) {
+        padding: 40px;
+        background-color: themed("bgSoft");
+        height: 100%;
+
+        h1 {
+            color: themed("textColor");
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            border-bottom: solid;
+            margin-bottom: 40px;
+            font-size: larger;
+            font-weight: bolder;
+            border-radius: 15px;
+        }
+    }
+}

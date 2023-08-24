@@ -1,0 +1,112 @@
+@import "../../style.scss";
+
+.friend {
+    @include themify($themes) {
+        display: flex;
+        flex-direction: column;
+        background-color: themed("bgSoft");
+        height: 100%;
+
+        .header {
+            font-weight: bolder;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            position: sticky;
+            top: 49.5px;
+            background-color: themed("bg");
+            color: themed("textColor");
+            z-index: 999;
+            padding: 1rem;
+            margin: 15px;
+            border-radius: 15px;
+            box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+            // color:white;
+
+            h3 {
+                border-radius: 15px;
+                padding: 15px;
+
+                background-color: themed("friendBtn");
+            }
+
+            h3:hover {
+                padding: 13px;
+                cursor: pointer;
+            }
+
+
+        }
+
+        .bodydd {
+            background-color: themed("bgSoft");
+            color: themed("textColor");
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+
+            .friend-card {
+                background-color: themed("bg");
+                display: flex;
+                align-items: center;
+                padding: 10px;
+                border: 1px solid #ccc;
+                border-radius: 15px;
+                box-shadow: 0px 1px 5px 0px rgba(0, 0, 0, 0.2);
+                gap: 5px;
+
+
+                .friend-def-img{
+                    width:80px;
+                }
+                .friend-avatar {
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 50%;
+                    margin-right: 20px;
+                }
+
+                .friend-info {
+                    flex: 1;
+
+                    h2 {
+                        margin-bottom: 10px;
+                    }
+
+                    p {
+                        font-size: 14px;
+                        color: #555;
+                    }
+                }
+
+                button {
+                    padding: 10px;
+                    background-color: rgb(232, 45, 45);
+                    color: white;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 15px;
+                    // color: themed("textColor");
+                }
+
+                .btn-2 {
+                    padding: 10px;
+                    background-color: rgb(70, 45, 232);
+                    display: flex;
+                    color: white;
+                    align-items: center;
+                    justify-content: center;
+                    border-radius: 15px;
+                    // color: themed("textColor");
+                }
+
+                button:hover {
+                    padding: 11px;
+                }
+            }
+        }
+    }
+}

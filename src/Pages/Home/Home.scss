@@ -1,0 +1,26 @@
+/* .Home{
+    display: grid;
+    grid-template-columns: 22rem auto 18rem;
+    gap: 1rem;
+} */
+
+@import "../../style.scss";
+
+.home {
+
+
+    @include themify($themes) {
+        padding: 20px 70px;
+        gap: 50px;
+        // height: 1200px;
+        background-color: themed("bgSoft");
+
+        @include mobile {
+            padding: 10px;
+        }
+
+        @include tablet {
+            padding: 20px;
+        }
+    }
+}

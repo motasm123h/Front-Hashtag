@@ -1,0 +1,136 @@
+@import "../../style.scss";
+
+.search-result {
+    @include themify($themes) {
+        background-color: themed("bgSoft");
+        height: 100%;
+
+        .UserSearch {
+
+            display: flex;
+            gap: 30px;
+            flex-direction: column;
+
+            h1 {
+                border-radius: 20px;
+                font-size: 24px;
+                font-weight: bold;
+                display: flex;
+                border-bottom: 3px solid themed("bg");
+                border-top: 3px solid themed("bg");
+                color: themed("textColor");
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding-bottom: 10px;
+            }
+
+            .friend-container {
+
+                // display: felx;
+                // flex-direction: column;
+                padding: 5px 40px;
+
+
+                .friend-card {
+
+                    // background-color: themed("bg");
+                    display: flex;
+                    align-items: center;
+                    padding: 10px;
+                    border: 2px solid #ccc;
+                    border-radius: 15px;
+                    box-shadow: 1px 1px 5px 0px rgba(0, 0, 0, 0.2);
+                    // gap: 0px;
+
+                    .friend-avatar {
+                        width: 70px;
+                        height: 70px;
+                        border-radius: 50%;
+                        margin-right: 20px;
+                    }
+
+                    .friend-info {
+                        flex: 1;
+
+                        h2 {
+                            margin-bottom: 10px;
+                        }
+
+                        p {
+                            font-size: 14px;
+                            color: #555;
+                        }
+                    }
+                }
+            }
+
+            .buttons {
+                // color:themed("textColor");
+                color: white;
+                padding: 10px;
+                width: 200px;
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                background-color: rgb(56, 56, 154);
+                border-radius: 15px;
+            }
+
+
+            .img-center {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                padding: 50px;
+            }
+
+
+            img {
+                // left: 150px;
+                display: flex;
+
+                border-radius: 50%;
+                width: 150px;
+                height: 150px;
+            }
+        }
+
+        .PostSearch {
+            padding: 10px;
+
+            h1 {
+                border-radius: 20px;
+                border-bottom: 1px solid themed("bg");
+                border-top: 3px solid themed("bg");
+                color: themed("textColor");
+                font-size: 24px;
+                font-weight: bold;
+                display: flex;
+                border-bottom: 3px solid themed("bg");
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                padding-bottom: 10px;
+            }
+
+        }
+
+        .img-center {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding: 50px;
+        }
+
+        padding: 15px;
+
+        img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+        }
+    }
+}

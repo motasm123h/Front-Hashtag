@@ -1,0 +1,85 @@
+@import "../../../style.scss";
+
+.cont {
+    display: grid;
+    grid-template-rows: 12.3% 78% 10%;
+    overflow: hidden;
+    background-color: #aea8cf;
+    border-radius: 20px;
+    // box-shadow: 0px 0px 25px 10px rgba(0, 0, 0, 0.38);
+
+    .logo {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 10px;
+        padding: 10px;
+        justify-content: center;
+
+        h4 {
+            font-size: 15px;
+            font-weight: bolder;
+            color: rgb(15, 15, 15);
+            text-transform: uppercase;
+        }
+
+        img {
+            width: 300px;
+            // height: 6cap;
+            // border-radius: 50%;
+        }
+    }
+
+    .contacts {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        overflow: auto;
+        gap: 10.0px;
+
+        &::-webkit-scrollbar {
+            width: 0.2rem;
+
+            &-thumb {
+                background-color: #00000039;
+                width: 0.2rem;
+                border-radius: 1px;
+            }
+        }
+
+        .contact {
+            // background-color: #ffffff34;
+            height: 70px;
+            cursor: pointer;
+            width: 90%;
+            border-radius: 10px;
+            padding: 10px;
+            display: flex;
+            gap: 7px;
+            align-items: center;
+            transition: 10.9s, ease-in-out;
+
+            .userImage {
+                img {
+                    width: 60px;
+                    height: 60px;
+                    border-radius: 50%;
+                }
+            }
+
+            .userName {
+                font-size: 20px;
+                font-weight: bold;
+                color: rgb(0, 0, 0);
+            }
+        }
+
+        .selected {
+            background-color: #8067ee;
+        }
+
+    }
+
+
+   
+}

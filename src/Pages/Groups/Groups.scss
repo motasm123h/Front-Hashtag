@@ -1,0 +1,131 @@
+@import "../../style.scss";
+
+.icon-header {
+    @include themify($themes) {
+        .icon-container {
+
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+            position: sticky;
+            background-color: themed("bgSoft");
+
+            h1 {
+                display: flex;
+                flex-direction: column;
+                justify-content: cneter;
+                align-items: center;
+                font-size: 1.5em;
+                font-weight: bolder;
+                color: themed("textColor");
+            }
+
+            .icon {
+                .sport-icon {
+                    // color: rgb(12, 12, 12);
+                    width: 50px;
+
+                    &:hover {
+                        cursor: pointer;
+                        color: red
+                    }
+                }
+
+                .love-icon {
+
+                    color: rgb(12, 12, 12);
+                    width: 50px;
+
+                    &:hover {
+                        cursor: pointer;
+                        color: red
+                    }
+                }
+
+                .cook-icon {
+                    width: 50px;
+                    color: rgb(12, 12, 12);
+
+                    &:hover {
+                        cursor: pointer;
+                        color: red
+                    }
+                }
+
+                .enjoy-icon {
+                    cursor: pointer;
+                    color: rgb(12, 12, 12);
+                    width: 50px;
+
+                    &:hover {
+                        cursor: pointer;
+                        color: red
+                    }
+                }
+
+                .happy-icon {
+                    cursor: pointer;
+                    color: rgb(12, 12, 12);
+                    width: 50px;
+
+                    &:hover {
+                        cursor: pointer;
+                        color: red
+                    }
+                }
+
+                .threat-icon {
+                    cursor: pointer;
+                    width: 50px;
+                    color: rgb(12, 12, 12);
+
+                    &:hover {
+                        cursor: pointer;
+                        color: red
+                    }
+                }
+
+                .friend-icon {
+                    color: rgb(12, 12, 12);
+                    cursor: pointer;
+                    width: 50px;
+
+                    &:hover {
+                        cursor: pointer;
+                        color: red
+                    }
+                }
+
+                .travel-icon {
+                    cursor: pointer;
+                    width: 50px;
+                    color: rgb(12, 12, 12);
+
+                    &:hover {
+                        color: red;
+                        cursor: pointer;
+                    }
+                }
+
+                .friend-icon {
+                    color: rgb(12, 12, 12);
+                    cursor: pointer;
+                    width: 50px;
+
+                    &:hover {
+                        cursor: pointer;
+                        color: red;
+                    }
+                }
+
+                padding: 14px;
+                display: flex;
+                flex-direction: row;
+                justify-content: space-between;
+                align-items: center;
+            }
+
+        }
+    }
+}

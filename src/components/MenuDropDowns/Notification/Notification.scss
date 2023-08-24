@@ -1,0 +1,297 @@
+@import "../../../style.scss";
+
+.any_thing {
+
+    @include themify($themes) {
+        .dropDownNoti {
+            position: absolute;
+            top: 3.9rem;
+            right: 50px;
+            width: 360px;
+            height: 450px;
+            padding: 15px;
+            border-radius: 15px;
+            background-color: themed("bg");
+            color: themed("textColor");
+            border: 2px solid gray;
+            box-shadow: 0 0px 10px -2px rgb(230, 223, 223);
+
+            @include tablet {
+                right: 35px;
+            }
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: -0.7rem;
+                right: 1.8rem;
+                width: 20px;
+                height: 20px;
+                transform: rotate(45deg);
+                background-color: themed("bg");
+                border-left: 2px solid gray;
+                border-top: 2px solid gray;
+            }
+
+
+
+            .User-content {
+                position: relative;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                padding-bottom: 20px;
+                box-shadow: 0 2px 2px -2px gray;
+
+                span {
+                    cursor: pointer;
+                    color: themed("textColor");
+                    font-size: 25px;
+                    font-weight: lighter;
+                    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+                }
+
+                img {
+                    width: 40px;
+                    height: 40px;
+                    border-radius: 50%;
+
+
+                }
+            }
+
+            .HR {
+                padding: 1px;
+            }
+
+            .Notification-content {
+                overflow-y: scroll;
+                color: themed("textColor");
+
+                &::-webkit-scrollbar {
+                    display: none;
+                }
+
+                ul {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 0px;
+
+                    .unread {
+                        margin: 5px 0px;
+                        display: flex;
+                        // justify-content: space-between;
+                        gap: 8px;
+                        // background-color: rgb(206, 198, 198);
+                        padding: 5px;
+                        // padding:0 5px;
+                        border-radius: 10px;
+
+                        img {
+                            padding: 0;
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                        }
+
+                        .name-message {
+                            flex: 1;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 0px;
+                            align-items: flex-start;
+
+                            .name-dele-read {
+                                display: flex;
+                                gap: 150px;
+                                justify-content: space-between;
+
+                                .button-icon {
+                                    display: flex;
+                                    gap: 15px;
+
+                                    .dele-btn {
+                                        :hover {
+                                            cursor: pointer;
+                                            color: red;
+                                        }
+
+                                    }
+
+                                    .Mark-btn {
+                                        color: gray;
+
+                                        :hover {
+                                            cursor: pointer;
+                                            // color: rgb(12, 100, 224);
+                                        }
+                                    }
+                                }
+
+
+                                span {
+                                    font-weight: bold;
+                                }
+
+                            }
+
+                            .button-Friend {
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: center;
+                                gap: 20px;
+
+                                .Acc-btn {
+                                    background-color: rgb(0, 55, 255);
+                                    color: white;
+                                    padding: 5px;
+                                    border-radius: 15px;
+                                    font-size: 17px;
+                                }
+
+                                &:hover {
+                                    cursor: pointer;
+                                }
+
+
+                                .Reje-btn {
+                                    background-color: rgb(188, 7, 7);
+                                    color: white;
+                                    padding: 5px;
+                                    border-radius: 15px;
+                                    font-size: 17px;
+                                }
+                            }
+
+                            p {
+                                color: themed("textColor");
+                                font-style: italic;
+                                font-weight: 200;
+                                font-size: 13px;
+                            }
+                        }
+                    }
+
+                    .read {
+                        margin: 5px 0px;
+                        display: flex;
+                        justify-content: space-between;
+                        gap: 8px;
+                        // background-color: rgb(161, 157, 157);
+                        padding: 5px;
+                        // padding:0 5px;
+                        border-radius: 10px;
+
+                        img {
+                            padding: 0;
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                        }
+
+                        .name-message {
+                            flex: 1;
+                            display: flex;
+                            flex-direction: column;
+                            gap: 0px;
+                            align-items: flex-start;
+
+                            .name-dele-read {
+                                display: flex;
+                                gap: 150px;
+                                justify-content: space-between;
+
+                                .button-icon {
+                                    display: flex;
+                                    gap: 15px;
+
+                                    .dele-btn {
+                                        :hover {
+                                            cursor: pointer;
+                                            color: red;
+                                        }
+
+                                    }
+
+                                    .Mark-btn {
+                                        color: rgb(12, 100, 224);
+
+                                        :hover {
+                                            cursor: pointer;
+                                            color: rgb(12, 100, 224);
+                                        }
+                                    }
+                                }
+
+
+                                span {
+                                    font-weight: bold;
+                                }
+
+                            }
+
+                            .button-Friend {
+                                display: flex;
+                                flex-direction: row;
+                                justify-content: center;
+                                // align-items: end;
+                                gap: 20px;
+
+                                .Acc-btn {
+                                    background-color: rgb(0, 55, 255);
+                                    color: white;
+                                    padding: 5px;
+                                    border-radius: 15px;
+                                    font-size: 17px;
+                                }
+
+                                &:hover {
+                                    cursor: pointer;
+                                }
+
+
+                                .Reje-btn {
+                                    background-color: rgb(188, 7, 7);
+                                    color: white;
+                                    padding: 5px;
+                                    border-radius: 15px;
+                                    font-size: 17px;
+                                    // font:
+                                }
+                            }
+
+                            p {
+                                color: themed("textColor");
+                                font-style: italic;
+                                font-weight: 200;
+                                font-size: 13px;
+                            }
+                        }
+                    }
+
+
+
+                }
+
+            }
+
+            @include mobile {
+                width: 250px;
+                height: 350px;
+            }
+        }
+
+
+
+    }
+}
+
+// @media screen and (max-width: 767px) {
+//     .dropDownNotiu {
+//         top: 8.4rem;
+//         right: 15rem;
+//         width: 300px;
+//         height: 500px;
+//     }
+// }

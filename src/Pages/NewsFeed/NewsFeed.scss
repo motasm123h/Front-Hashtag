@@ -1,0 +1,23 @@
+@import "../../style.scss";
+
+.newsFeed {
+    @include themify($themes) {
+        height: 100%;
+        background-color: themed("bgSoft");
+
+        h1 {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 25px;
+            font-size: 30px;
+            font-weight: bold;
+            color: themed("textColor");
+        }
+
+        .newsFeedPost {
+
+            padding: 15px;
+        }
+    }
+}

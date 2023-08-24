@@ -1,0 +1,15 @@
+@import "../../style.scss";
+
+
+.group {
+    @include themify($themes) {
+        background-color: themed("bgSoft");
+
+            // height: 550px;
+        .group-header {
+            height: 100%;
+            padding: 80px;
+        }
+    }
+
+}

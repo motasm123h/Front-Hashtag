@@ -1,0 +1,58 @@
+h1{
+    color: rgb(0, 0, 0);
+    position: relative;
+    // left: 50%;
+    // font-size: 180px;
+    font-family: 'Courier New', Courier, monospace;
+}
+.select-tag {
+    font-family: 'Courier New', Courier, monospace;
+    width: 90%;
+    height: 100%;
+    padding: 15px;
+    margin: 15px;
+    display: flex;
+    border-radius: 15px;
+    background-color: rgb(244, 242, 242);
+    border: 2px solid black;
+    overflow-x: hidden;
+    
+}
+
+.select-tag::-webkit-scrollbar {
+    //  display: none;
+    width: 20px;
+    color: red;
+}
+
+.select-tag>option {
+    
+    display: flex;
+    align-items: center;
+    // font-size: large;
+    font-weight: bolder;
+    padding: 10px;
+    // background-color: #b64444;
+
+}
+
+.select-tag>option:hover {
+    display: flex;
+    align-items: center;
+    font-size: large;
+    font-weight: bolder;
+    cursor: pointer;
+}
+
+.sele-btn {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    top: 15%;
+    left: 40%;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 15px;
+    background-color: rgb(199, 204, 204);
+    color: rgb(0, 0, 0);
+}

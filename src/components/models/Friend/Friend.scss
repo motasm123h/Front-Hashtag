@@ -1,0 +1,64 @@
+.h-friend {
+    h1 {
+        color: black;
+        font-size: 15px;
+        font-weight: bolder;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        &:hover {
+            background-color: rgb(198, 143, 13);
+            color: white;
+            border-radius: 20px;
+            cursor: pointer;
+        }
+    }
+}
+
+.modal-like-user {
+    display: grid;
+    grid-template-columns: 150px 150px 150px;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+
+
+    .model-not-found {
+        position: absolute;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        // padding: 25px;
+        margin: 20px;
+    }
+
+    .modal-like-user-info {
+        border-radius: 20px;
+        box-shadow: 0px 0px 35px -10px rgba(0, 0, 0, 0.38);
+        color: rgb(20, 17, 17);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 10px;
+        margin: 9px;
+
+        img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+
+        span {
+            padding: 5px 20px;
+            font-size: 16px;
+            font-weight: bolder;
+            border: 1px solid;
+            border-right: 1px solid;
+            border-radius: 10px;
+            margin: 1px;
+        }
+    }
+}

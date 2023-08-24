@@ -1,0 +1,108 @@
+@import "../../style.scss";
+
+.comments {
+    @include themify($themes) {
+        //new
+        height: auto;
+        max-height: 350px;
+        max-width: 800px;
+        overflow-x: hidden;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+            display: none;
+        }
+
+
+        .write {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            margin: 20px 0px;
+            // border-bottom: 0.5px solid gray;
+            position: relative sticky;
+
+            img {
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            input {
+                flex: 5;
+                padding: 10px;
+                border: 1px solid themed("border");
+                background-color: transparent;
+                color: themed("textColor");
+                // box-shadow: 0.1px 0.1px 50px 1px themed("border");
+            }
+
+            button {
+                border: none;
+                background-color: #5271ff;
+                color: white;
+                padding: 10px;
+                cursor: pointer;
+                border-radius: 3px;
+            }
+        }
+
+
+
+        //***
+        .comment {
+            margin: 15px 0px;
+            display: flex;
+            justify-content: space-between;
+            gap: 25px;
+
+
+            img {
+                width: 40px;
+                height: 40px;
+                border-radius: 50%;
+                object-fit: cover;
+            }
+
+            .info {
+                flex: 5;
+                display: flex;
+                flex-direction: column;
+                gap: 3px;
+                justify-content: flex-start;
+                padding: 5px;
+
+
+                span {
+                    border-radius: 15px;
+                }
+
+                p {
+                    display: flex;
+                    padding-left: 5px;
+                    border-radius: 5px;
+                    width: auto;
+                    flex: 1;
+                    border: 1px solid lightgray;
+                }
+
+                span {
+                    font-weight: 900;
+                }
+
+                p {
+                    color: themed("textColorSoft")
+                }
+            }
+
+            .date {
+                flex: 1;
+                align-self: center;
+                color: gray;
+                font-size: 12px;
+            }
+        }
+    }
+}

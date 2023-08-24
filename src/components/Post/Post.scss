@@ -1,0 +1,148 @@
+@import "../../style.scss";
+
+.card {
+    //this is also fo the flip
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
+
+    .front {
+        //this is also fo the flip
+        backface-visibility: hidden;
+
+        .post {
+            @include themify($themes) {
+                -webkit-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+                -moz-box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+                box-shadow: 0px 0px 25px -10px rgba(0, 0, 0, 0.38);
+                border-radius: 30px;
+                background-color: themed("bg");
+                color: themed("textColor");
+
+                .container {
+                    padding: 15px;
+
+                    .user {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        .userInfo {
+                            display: flex;
+                            gap: 10px;
+
+                            img {
+                                width: 40px;
+                                height: 40px;
+                                border-radius: 50%;
+                                object-fit: cover;
+                            }
+
+                            .details {
+                                display: flex;
+                                flex-direction: column;
+
+                                .name {
+                                    font-weight: 500;
+                                }
+
+                                .date {
+                                    font-size: 12px;
+                                }
+                            }
+                        }
+                    }
+
+                    .content {
+                        margin: 10px 0px;
+
+                        img {
+                            width: 100%;
+                            max-height: 500px;
+                            object-fit: cover;
+                            margin-top: 20px;
+                            border-radius: 10px;
+                        }
+                    }
+
+                    .info {
+                        display: flex;
+                        // flex-direction: row;
+                        // align-items: center;
+                        justify-content: space-between;
+
+                        .test {
+                            display: flex;
+                            flex-direction: row;
+                            // align-items: center;
+                            gap: 20px;
+
+
+                            .item {
+                                display: flex;
+                                flex-direction: row;
+                                align-items: center;
+                                gap: 10px;
+                                cursor: pointer;
+                                font-size: 14px;
+
+                                .like-border {
+                                    box-shadow: 0px 0px 25px -10px rgba(222, 220, 220, 0.38);
+                                    background-color:themed("bgSoft") ;
+                                    padding: 2px 8px;
+                                    border-radius: 50%;
+                                    color: themed("textColor");
+                                }
+                            }
+                        }
+
+                        .hash {
+                            background-color: rgb(57, 174, 143);
+                            border-radius: 15px;
+                            padding: 5px;
+                            font-size: 12px;
+                            font-weight: bolder;
+                            color: white;
+
+                            &:hover{
+                                cursor: pointer;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    .back {
+        @include themify($themes) {
+            backface-visibility: hidden;
+            transform: rotateY(-180deg);
+            position: relative;
+
+
+            .container {
+
+                bottom: 70px;
+                position: absolute;
+
+                .memo {
+                    padding-bottom: 45px;
+                }
+
+                .butt {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-between;
+                    color: themed("textColor");
+                }
+            }
+        }
+
+
+    }
+}
+
+//this is also fo the flip
+.cardFlip {
+    transform: rotateY(-180deg);
+}

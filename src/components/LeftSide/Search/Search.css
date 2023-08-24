@@ -1,0 +1,21 @@
+.Search{
+    display:flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 25px;
+}
+.InputSearch{
+display: flex;
+background-color: var(--inputColor);
+border-radius: 10px;
+padding: 5px;
+}
+.InputSearch>input{
+    background-color: transparent;
+    border: none;
+    outline: none;
+}
+.s-icon{
+    cursor: pointer;
+}
